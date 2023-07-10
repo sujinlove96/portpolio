@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./js/js_min.js"></script>
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="shortcut icon" href="./favicon (1).ico" type="image/x-icon">
+  <title>이범준 포트폴리오</title>
+  <style>
+   
+    .wrap{
+      overflow: hidden;
+      background:antiquewhite
+    }
+
+    h1 img{
+      width: 50px;
+      width: 50px;
+      margin-left: 20px;
+    }
+
+    .container{
+      position: relative;
+      margin-bottom: 150px;
+    }
+
+    .container ul{
+      font-family: 'Jua', sans-serif;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      float: right;
+      position:  absolute;
+      top: 0;
+      right: 0;
+      margin-top: 15px;
+      margin-right: 20px;
+    }
+
+    .container ul li{
+      font-family: 'Jua', sans-serif;
+      margin-right: 20px;
+      font-weight: 600;
+      font-size: 20px;
+      color: #000;
+    }
+
+    .container ul li:hover{
+      color: lightgreen;
+    }
+
+    h2,h3,p{
+      font-family: 'Jua', sans-serif;
+      color: #000;
+      text-align: center;
+    }
+
+    h2{
+      font-weight:700;
+      font-size: 30px;
+    }
+
+    h3{
+      font-weight: 700;
+      font-size: 20px;
+    }
+
+    .img-move{
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+
+    .container h2{
+      position: absolute;
+      top: 300px;
+      left: 80px;
+      color: skyblue;
+      text-shadow: -1px 0px yellow, 0px 1px yellow, 1px 0px yellow, 0px -1px yellow;
+      font-weight: 700;
+      font-size: 25px;
+      animation-name:Okay;
+      animation-duration: 4s;
+    }
+
+    .sec01 img{
+      width: 300px;
+      height: 300px;
+      margin: auto 100px;
+    }
+    
+    .txt{
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 100px;
+    }
+
+    .sec01 h2,h3,p{
+      margin-bottom: 15px;
+    }
+
+    .sec01 h3{
+      font-size: 23px;
+    }
+
+    .sec01 p{
+      font-weight: 500;
+      font-size: 16px;
+    }
+
+    .sec02{
+      margin-bottom: 100px;
+    }
+
+    .sec02 h2{
+      margin-bottom: 30px;
+    }
+
+    .sec02 h3{
+      margin-top: 20px;
+      color: blueviolet;
+    }
+
+    .graph{
+      height: 40px;
+      background: #ccc;
+      border-radius: 40px;
+      margin: 0 30px;
+    }
+
+    .graph .html{
+      display: block;
+      width: 85%;
+      height: 40px;
+      padding: 0 10px;
+      line-height: 40px;
+      text-align: right;
+      background: lightpink;
+      border-radius: 40px;
+      box-sizing: border-box;
+      color: #000;
+      animation: html 2s 1;
+    }
+
+    .graph .css{
+      display: block;
+      width: 80%;
+      height: 40px;
+      padding: 0 10px;
+      line-height: 40px;
+      text-align: right;
+      background: lightgreen;
+      border-radius: 40px;
+      box-sizing: border-box;
+      color: #000;
+      animation: css 2s 1;
+    }
+
+    .graph .java{
+      display: block;
+      width: 80%;
+      height: 40px;
+      padding: 0 10px;
+      line-height: 40px;
+      text-align: right;
+      background: lightblue;
+      border-radius: 40px;
+      box-sizing: border-box;
+      color: #000;
+      animation: java 2s 1;
+    }
+
+    .sec03 h2{
+      margin-bottom: 50px;
+    }
+
+    .cont,.cont2{
+      display: flex;
+      border: 1px solid #666;
+      box-shadow: 1px 1px #000;
+      margin: 0 20px 30px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .cont:hover{
+      margin: 10px;
+    }
+
+    .cont2:hover{
+      margin: 10px;
+    }
+
+
+    .cont img{
+      width: 55%;
+      float: left;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-left: 10px;
+      
+    }
+
+    .cont2 img{
+      width: 200px;
+      height: 170px;
+      float: left;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-left: 10px;
+      margin-right: 15px;
+    }
+
+    .text{
+      float: right;
+      text-align: center;
+      /* padding-top: 50px; */
+    }
+
+    .sec03 .text h2{
+      margin-bottom: 0;
+    }
+
+    .sec04{
+      position: relative;
+      margin-top: 130px;
+      margin-bottom: 50px;
+    }
+
+    .sec04 .img{
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    .sec04 h2{
+      position: absolute;
+      top: 120px;
+      left: 23px;
+      margin: 0 150px;
+      margin-bottom: 30px;
+      color: #000;
+      font-weight: 700;
+      font-size: 23px;
+    }
+
+    .sec04 a{
+      position: absolute;
+      top: 240px;
+      left: 165px;
+      border: 1px solid black;
+      border-radius: 30px;
+      padding: 20px;
+      background: #000;
+      color: #fff;
+    }
+
+    .sec04 .a1{
+      font-family: 'Jua', sans-serif;
+      top: 200px;
+    }
+
+    .sec04 .a2{
+      font-family: 'Jua', sans-serif;
+      top: 280px;
+    }
+
+    .footer{
+      margin-top: 30px;
+      margin-bottom: 100px;
+    }
+
+    address{
+      font-family: 'Jua', sans-serif;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+
+
+
+
+
+    @media(min-width:768px){
+
+      
+
+      .container h1{
+        order: 2;
+        text-align: center;
+      }
+
+      .container ul{
+        order: 3;
+      }
+
+    .container h2{
+      font-family: 'Jua', sans-serif;
+      left: 40%;
+      text-align: center;
+      padding-top: 130px;
+      font-size: 30px;
+    }
+    .sec01 img{
+      float: left;
+    margin-left: 90px;
+    
+    }
+    .sec04 h2{ 
+      left: 140px;
+      font-size: 40px;
+    }
+    .sec04 .a1{
+      margin-top: 55px;
+      left:40%;
+    }
+
+    .sec04 .a2{
+      font-family: 'Jua', sans-serif;
+      margin-top: 55px;
+      left:40%;
+    }
+
+
+  }
+
+
+
+    @keyframes html {
+      0%{
+        font-family: 'Jua', sans-serif;
+        width: 0;
+      }
+
+      100%{
+        font-family: 'Jua', sans-serif;
+        width: 85%;
+      }
+    }
+
+    @keyframes css {
+      0%{
+        font-family: 'Jua', sans-serif;
+        width: 0;
+      }
+
+      100%{
+        font-family: 'Jua', sans-serif;
+        width: 80%;
+      }
+    }
+
+    @keyframes java {
+      0%{
+        font-family: 'Jua', sans-serif;
+        width: 0;
+      }
+
+      100%{
+        font-family: 'Jua', sans-serif;
+        width: 80%;
+      }
+    }
+  
+
+    @keyframes Okay{
+      from {
+        opacity: 0;
+      }
+      to { 
+        opacity: 1;
+      }
+    }
+  </style>
+
+  <script>
+
+    $(document).ready(function($) {
+
+$(".scroll_move").click(function(event){         
+
+  event.preventDefault();
+
+  $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+
+});
+
+});
+
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <div class="container">
+        <h1>
+        <a href="./index.html">
+          <img src="./images/logo.jpg" alt="logo-img">
+        </a>
+      </h1>
+        <ul>
+          <li><a href="#div2" id="scroll_move">Profile</a></li>
+          <li><a href="#div3" id="scroll_move">Portfolio</a></li>
+          <li><a href="#div4" id="scroll_move">Contect</a></li>
+        </ul>
+        <h2>"처음뵙겠습니다."</h2>
+        <div class="img-move">
+          <img src="./images/move-img2.gif" alt="hello">
+        </div>
+      </div>
+    </header>
+    <div id="div2">
+    <section class="sec01">
+      <img src="./images/myfrofile.svg" alt="myprofile">
+      <div class="txt">
+      <h2>이범준</h2>
+      <h3>1996.11.30</h3>
+      <p>sujinlove96@naver.com</p>
+      <!-- 이력 -->
+      <h3>이력</h3>
+      <p>
+        2023.03.16~2023.08.04 <br>
+        인천IT직업능력개발학원
+        <br>
+        웹표준 반응형 웹디자인&웹퍼블리셔 양성과정 수료
+        <br>
+        컴퓨터 활용능력 1급 자격증 <br>
+        한국사 능력검정 1급 자격증 <br>
+        ITQ 파워포인트 자격증
+        
+        </p>
+         
+        <h3>Personality Type</h3>
+        <p>ESFP - 성격유형 <br>
+        
+          다정다감하고 친절한 ESFP는 타인에게 매우 친절하며<br> 수용적이고 현실적이다.<br>
+          어떠한 상황이 닥치더라도 잘 대처하며 적응 할 수 있으며,<br> 선입견이 없어 개방적이고 관용적인 편이다.<br>
+          새로운 스타일을 시험하는 것을 좋아하여<br> 독창성과 창의성을 가지고 있다.
+        </div>
+    </section>
+  </div>
+  
+  <div id="div3">
+    <section class="sec02">
+      <h2>SKILL</h2>
+      <h3>HTML</h3>
+      <div class="graph">
+        <span class="html">85%</span>
+      </div>
+      <h3>CSS</h3>
+      <div class="graph">
+        <span class="css">80%</span>
+      </div>
+      <h3>Java</h3>
+      <div class="graph">
+        <span class="java">80%</span>
+      </div>
+    </section>
+    <section class="sec03">
+      <h2>PORTFOLIO</h2>
+      <div class="cont clearfix">
+        <img src="./images/port01.PNG " alt="thum1">
+        <div class="text">
+          <h2>모질라</h2>
+          <h4></h4>
+          <p>07.09~07.11</p>
+          <p>Lorem ipsum dolor sit amet. <br>
+        Lorem, ipsum dolor.</p>
+        </div>
+      </div>
+      </div>
+      <div class="cont2 clearfix">
+        <a href="https://sujinlove96.github.io/hlys/"><img src="./images/port02.PNG" alt="thum3"></a>
+        <div class="text">
+          <h2>할리스</h2>
+          <p>07.09~07.11</p>
+          <p>Lorem ipsum dolor sit amet. <br>
+        Lorem, ipsum dolor.</p>
+        </div>
+      </div>
+      </div>
+      <div class="cont clearfix">
+        <img src="./images/port01.PNG " alt="thum1">
+        <div class="text">
+          <h2>모질라</h2>
+          <h4></h4>
+          <p>07.09~07.11</p>
+          <p>Lorem ipsum dolor sit amet. <br>
+        Lorem, ipsum dolor.</p>
+        </div>
+      </div>
+      </div>
+      <div class="cont clearfix">
+        <img src="./images/port01.PNG " alt="thum1">
+        <div class="text">
+          <h2>모질라</h2>
+          <h4></h4>
+          <p>07.09~07.11</p>
+          <p>Lorem ipsum dolor sit amet. <br>
+        Lorem, ipsum dolor.</p>
+        </div>
+      </div>
+      </div>
+    </section>
+  </div>
+
+  <div id="div4">
+    <section class="sec04">
+      <div class="img">
+        <img src="./images/footer.png" alt="circle01">
+      </div>
+        <h2>"감사합니다."</h2>
+        <a href="#" class="a1">이력서 바로가기</a>
+        <a href="#" class="a2">자소서 바로가기</a>
+    </section>
+    </div>
+    <footer class="footer">
+      <address>
+        Copyright 2023. Lee Bum Jun. All pictures cannot be <br>
+        copied without permission. <br> ※ 해당 포트폴리오에 사용된 일부 이미지들은 <br>
+        비영리 비상업적인 목적으로 사용되었습니다.
+      </address>
+    </footer>
+  </div>
+
+</body>
+</html>
